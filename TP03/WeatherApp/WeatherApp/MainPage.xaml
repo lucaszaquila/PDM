@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage">
+    <Grid Margin="20,35,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   Text="Search by Zip Code"
+                   FontSize="Medium" 
+                   TextColor="White"/>
+            <Entry x:Name="cityEntry"
+                Grid.Row="1"
+               Grid.Column="0"
+               HorizontalOptions="FillAndExpand"
+               Text="" />
+            <Button Grid.Column="1"
+                Grid.Row="1"
+                Text="Get Weather"
+                Clicked="OnButtonClicked" />
+            <Label Grid.Row="2"
+               Text="Location:" />
+            <Label Grid.Row="2"
+               Grid.Column="1"
+               Text="{Binding Title}" />
+            <Label Grid.Row="3"
+               Text="Temperature:" />
+            <Label Grid.Row="3"
+               Grid.Column="1"
+               Text="{Binding Main.Temperature, StringFormat='{0} F'}" />
+            <Label Grid.Row="4"
+               Text="Wind Speed:" />
+            <Label Grid.Row="4"
+               Grid.Column="1"
+               Text="{Binding Wind.Speed, StringFormat='{0} mph'}" />
+            <Label Grid.Row="5"
+               Text="Humidity:" />
+            <Label Grid.Row="5"
+               Grid.Column="1"
+               Text="{Binding Main.Humidity, StringFormat='{0}%'}" />
+            <Label Grid.Row="6"
+               Text="Visibility:" />
+            <Label Grid.Row="6"
+               Grid.Column="1"
+               Text="{Binding Weather[0].Visibility}" />
+            <Label Grid.Row="7"
+                   Text="Sunrise:" />
+            <Label Grid.Row="7"
+                   Grid.Column="1"
+                   x:Name="sunrise"
+                   Text="" />
+            <Label Grid.Row="8"
+                       Text="Sunset:" />
+            <Label Grid.Row="8"
+                   Grid.Column="1"
+                   x:Name="sunset"
+                       Text="" />
+    </Grid>
+    </ContentPage>

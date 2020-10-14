@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TP02.View.Principal">
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            
+             <Label 
+               FontSize="18"
+               Text="Style Resources"
+               VerticalOptions="Start"
+               HorizontalOptions="Center"
+                 TextColor="blue"/>
+            
+            <Button
+                Text="ESTILO PADRÃO"
+                Clicked="ParaEstiloPadrao"/>
+            <Button 
+                Text="ESTILO DINAMICO"
+                Clicked="ParaEstiloDinamico"/>
+                
+            <Button 
+                Text="ESTILO EVENT TRIGGRES"
+                Clicked="ParaTrigger"/>
+            <Button 
+                Text="ESTILO GLOBAL"/>
+
+             
+             <Label 
+               Text="Passar parametro"
+                 TextColor="Blue"
+                 FontSize="18"
+                 HorizontalTextAlignment="Center"/>
+
+            <Button Text="HOME" 
+            Clicked="ParaHome"/>
+            
+            <Button Text="MESSAGING CENTER" />
+           
+            <Label 
+               Text="ListView"
+               TextColor="Blue"
+               FontSize="18"
+               HorizontalTextAlignment="Center"/>       
+            
+            <Button Text="SIMPLES"
+             Clicked="ParaListViewSimples"/>
+          
+            <Button Text="CLASSE COMPLEXA"/>
+          
+            <Button Text="PRODUTO"/>
+            <Label 
+               TextColor="Black"
+               FontSize="Small"
+               Margin="10, 0, 0, 0"
+               Text="Kawan Carvalho-CB300032X | Giovanna Bomfim-CB300015X"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
